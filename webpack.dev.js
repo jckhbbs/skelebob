@@ -16,21 +16,29 @@ module.exports = merge(common, {
         })
     ],
     module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: [{
-                    loader: "style-loader"
-                }, {
-                    loader: "css-loader", options: {
-                        sourceMap: true
+        rules: [{
+            test: /\.scss$/,
+            use: [{
+                loader: "style-loader"
+            }, {
+                loader: "css-loader",
+                options: {
+                    sourceMap: true
+                }
+            }, {
+                loader: "postcss-loader",
+                options: {
+                    sourceMap: true,
+                    config: {
+                        path: 'postcss.config.js'
                     }
-                }, {
-                    loader: "sass-loader", options: {
-                        sourceMap: true
-                    }
-                }]
-            },
-        ]
+                }
+            }, {
+                loader: "sass-loader",
+                options: {
+                    sourceMap: true
+                }
+            }]
+        }, ]
     }
 });

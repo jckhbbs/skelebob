@@ -35,15 +35,17 @@ module.exports = merge(common, {
         new CleanWebpackPlugin(),
     ],
     module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader", 
-                    "sass-loader"
-                ]
-            },
-        ]
+        rules: [{
+            test: /\.scss$/,
+            use: [{
+                loader: MiniCssExtractPlugin.loader
+            }, {
+                loader: "css-loader"
+            }, {
+                loader: "postcss-loader"
+            }, {
+                loader: "sass-loader"
+            }]
+        }]
     }
 });
