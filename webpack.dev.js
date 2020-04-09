@@ -12,7 +12,12 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/templates/template.html"
+            template: "./src/templates/index.html",
+            filename: "index.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/templates/page2.html",
+            filename: "page2.html"
         })
     ],
     module: {

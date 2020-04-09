@@ -19,7 +19,17 @@ module.exports = merge(common, {
             new OptimizeCssAssetsPlugin(),
             new TerserPlugin(),
             new HtmlWebpackPlugin({
-                template: "./src/templates/template.html",
+                template: "./src/templates/index.html",
+                filename: "index.html",
+                minify: {
+                    removeComments: true,
+                    collapseWhitespace: true,
+                    removeComments: true
+                }
+            }),
+            new HtmlWebpackPlugin({
+                template: "./src/templates/page2.html",
+                filename: "page2.html",
                 minify: {
                     removeComments: true,
                     collapseWhitespace: true,
