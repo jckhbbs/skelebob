@@ -1,4 +1,4 @@
-import { Hello } from "./js/hello-world";
+import { Slider } from "./js/slider";
 import "./scss/main.scss";
 
-Hello()
+Slider();

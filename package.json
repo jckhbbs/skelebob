@@ -48,5 +48,8 @@
     "> 1%",
     "iOS 7",
     "last 3 iOS versions"
-  ]
+  ],
+  "dependencies": {
+    "tiny-slider": "^2.9.2"
+  }
 }
